@@ -1,0 +1,11 @@
+.skill-name{ 
+    background-color: #68b0a2;
+    width: 150px;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+}
+
+.grow {
+    transition: 1s;
+}

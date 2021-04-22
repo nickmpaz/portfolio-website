@@ -1,0 +1,42 @@
+.top-stripe {
+    height: 0.5rem;
+    background-color: #4ec9b0;
+}
+.about-details {
+    background-color: #ffffff;
+    color: #616161;
+}
+.h-bar {
+    background-color: #616161;
+    height:5px;
+    width: 125px;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+.centered-item {
+    text-align: center;
+}
+.image {
+    height: 300px;
+    width: 300;
+}
+.center-container {
+    padding-top: 80px;
+}
+.text-bold {
+    font-size: 18pt;
+    font-weight: bold;
+}
+.text-normal {
+    line-height: 18pt;
+}
+.me-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.about-title {
+    margin-top: 50px;
+}
+.transition {
+    transition: 0.5s;
+}

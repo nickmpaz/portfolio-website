@@ -1,0 +1,85 @@
+.hexagon-container {
+  display: inline-block;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  width: 100px;
+}
+
+.hexagon-container.is-inViewport {
+  animation: flipInX 0.75s ease both;
+}
+
+.hexagon {
+  background-color: #4ec9b0;
+  display: inline-block;
+  height: 100%;
+  width: calc(100% * 0.57735);
+}
+
+.hexagon:before {
+  background-color: inherit;
+  content: "";
+  height: inherit;
+  position: absolute;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  top: 0;
+  transform: rotateZ(60deg);
+  width: inherit;
+}
+.hexagon:after {
+  background-color: inherit;
+  content: "";
+  height: inherit;
+  position: absolute;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  top: 0;
+  transform: rotateZ(-60deg);
+  width: inherit;
+}
+
+.hexagon-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+@keyframes flipInX {
+  0% {
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    transform: perspective(400px) rotateY(90deg);
+  }
+  40% {
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-transform: perspective(400px) rotateY(-20deg);
+    transform: perspective(400px) rotateY(-20deg);
+  }
+60% {
+    opacity: 1;
+    -webkit-transform: perspective(400px) rotateY(
+10deg
+);
+    transform: perspective(400px) rotateY(
+10deg
+);
+}
+80% {
+    -webkit-transform: perspective(400px) rotateY(
+-5deg
+);
+    transform: perspective(400px) rotateY(
+5deg
+);
+}
+100% {
+    opacity: 1;
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+}
+}

@@ -22,6 +22,13 @@ export const Splash: FC = () => {
     setTransition3(true);
   };
 
+  const scrollToAbout = () => {
+    var about = document.getElementsByClassName("about")[0];
+    about.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     startSplashEffect();
     doTransitions();
@@ -51,6 +58,7 @@ export const Splash: FC = () => {
               color="primary"
               size="large"
               endIcon={<KeyboardArrowRightIcon className="button-icon" />}
+              onClick={scrollToAbout}
             >
               Get to know me
             </Button>
